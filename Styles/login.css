@@ -1,0 +1,527 @@
+/* Fuente general */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #FFB142, #ED582D);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container {
+  flex: 1; /* ocupa todo el espacio restante debajo del navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #ED582D;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.8rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #ED582D;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.9rem;
+  background: #ED582D !important;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #d34b27;
+}
+
+.extra-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.extra-text a {
+  color: #ED582D;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.extra-text a:hover {
+  text-decoration: underline;
+}
+
+
+.login-section {
+  padding: 4rem 0;  /* separación arriba y abajo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); 
+  /* 👆 asegura que ocupe toda la pantalla menos navbar/topbar */
+}
+
+
+
+
+
+/* ---------- TOPBAR ---------- */
+#topbar {
+  background-color: #ED582D;
+  color: black;
+  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topbar .topbar-left,
+#topbar .topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+#topbar a.email {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+#topbar a.email i {
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.contact-info i {
+  font-size: 14px;
+  color: white;
+}
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-info a:hover {
+  color: black;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.social-icons a {
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+.social-icons a i {
+  color: white;
+}
+.social-icons a:hover i {
+  color: white;
+}
+
+#topbar .topbar-right a {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  margin-left: 15px;
+}
+#topbar .topbar-right a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #topbar {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+/* ---------- TOPBAR ---------- */
+#topbar {
+  background-color: #ED582D;
+  color: black;
+  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topbar .topbar-left,
+#topbar .topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+#topbar a.email {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+#topbar a.email i {
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.contact-info i {
+  font-size: 14px;
+  color: white;
+}
+.contact-info a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-info a:hover {
+  color: black;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.social-icons a {
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+.social-icons a i {
+  color: white;
+}
+.social-icons a:hover i {
+  color: white;
+}
+
+#topbar .topbar-right a {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  margin-left: 15px;
+}
+#topbar .topbar-right a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #topbar {
+    display: none !important;
+  }
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+nav.scrolled {
+  background: #ED582D;
+}
+
+label.logo img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #111; /* negro sobre fondo claro */
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ED582D; /* naranja al hover o activo */
+}
+
+nav.scrolled ul li a {
+  color: white; /* texto blanco cuando navbar es naranja */
+}
+
+nav.scrolled ul li a:hover,
+nav.scrolled ul li a.active {
+  color: white;
+}
+
+.checkbtn {
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+/* ---------- NAVBAR RESPONSIVE ---------- */
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav {
+    background: #ED582D;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    top: 80px;
+    left: -100%;
+    background: #ED582D;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    transition: all 0.4s ease;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(107, 97, 97, 0.2);
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    color: white !important;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: white;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* ===== AJUSTES SOLO PARA EL LOGIN ===== */
+/* ===== AJUSTES SOLO PARA EL LOGIN ===== */
+body.login-page nav.navbar.navbar-scroll {
+  background: #fff !important;   /* Fondo blanco */
+}
+
+body.login-page nav.navbar.navbar-scroll ul li a {
+  color: #111 !important;        /* Texto negro */
+}
+
+body.login-page nav.navbar.navbar-scroll ul li a:hover,
+body.login-page nav.navbar.navbar-scroll ul li a.active {
+  color: #ED582D !important;     /* Naranja al hover o activo */
+}
+
+body.login-page nav.navbar.navbar-scroll .checkbtn {
+  color: #111 !important;        /* Icono hamburguesa negro */
+}
+
+
+
+/* Fondo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja del modal */
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #ED582D;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content .btn-login {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+#verificacionModal {
+  display: none;
+}
+
+#verificacionModal.show {
+  display: flex !important;
+}
+
+
+#errorModal {
+  display: none;
+}
+
+#errorModal.show {
+  display: flex !important;
+}
+
+
+.close-error {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-error:hover {
+  color: #000;
+}
+
+
+
+
+#successModal {
+  display: none;
+}
+
+#successModal.show {
+  display: flex !important;
+}
+

@@ -1,0 +1,234 @@
+/* ====== ESTILOS DONAR MUEBLES ====== */
+.hero-donar {
+  background: url("../Img/sofas.jpg") no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-donar1 {
+  background: url("../Img/ropa.png") no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-donar2 {
+  background: url("../Img/artefacto.png") no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero-donar3 {
+  background: url("../Img/elec.png") no-repeat center center/cover;
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.donar-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.donar-text {
+  flex: 2;
+  text-align: justify;
+  color: #111;
+}
+
+.donar-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.donar-text p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #444;
+}
+
+.donar-form {
+  flex: 1;
+  background: #f78fb3;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.donar-form h3 {
+  background: #e17055;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.donar-form input,
+.donar-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+
+.donar-form textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+.donar-form button {
+  width: 100%;
+  padding: 12px;
+  background: #009432;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.donar-form button:hover {
+  background: #006d25;
+}
+
+@media (max-width: 900px) {
+  .donar-section {
+    flex-direction: column;
+  }
+}
+
+
+.iti {
+  width: 100%; /* hace que el input ocupe todo el ancho del form */
+  margin-bottom: 1rem;
+}
+
+.iti input {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.iti__country-list {
+  width: 250px !important; /* reduce el ancho del dropdown */
+  max-height: 200px;       /* controla el alto con scroll */
+  overflow-y: auto;
+}
+
+
+
+/* ====== ESTILO DEL SELECT DE TIPO DE MUEBLE ====== */
+.donar-form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 1rem;
+  border: 2px solid #e17055;   /* borde naranja suave */
+  border-radius: 6px;
+  background: #fff url("data:image/svg+xml;utf8,<svg fill='%23e17055' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 12px center;
+  background-size: 18px;
+  font-size: 1rem;
+  color: #333;
+  appearance: none; /* quita la flecha por defecto */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.donar-form select:hover {
+  border-color: #ff7675;        /* tono más claro al pasar el mouse */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.donar-form select:focus {
+  outline: none;
+  border-color: #d63031;        /* borde rojo intenso al enfocar */
+  box-shadow: 0 0 6px rgba(214,48,49,0.6);
+}
+
+
+
+
+
+
+/* ====== MODAL MENSAJE ====== */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #2d3436;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background: #009432;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #006d25;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.cerrar:hover {
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

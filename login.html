@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Traperos de San Pablo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="login-page">
+
+      <div id="topbar">
+        <!-- Correo a la izquierda -->
+        <div class="topbar-left">
+          <a href="mailto:avchabilidadessociales@gmail.com" class="email">
+            <i class="fa fa-envelope"></i> hola@traperosdesanpablo.org
+          </a>
+        </div>
+        <!-- Teléfono y redes sociales -->
+        <div class="topbar-right">
+          <!-- Teléfono -->
+          <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <a href="https://api.whatsapp.com/send/?phone=51943520010&amp;text=¡Hola! Me gustaría recibir más información sobre los programas de habilidades blandas!" target="_blank">(+51) 982 549 199</a>
+          </div>
+          <!-- Redes Sociales -->
+          <div class="social-icons">
+            <a href="https://www.facebook.com/traperosdesanpablo" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/traperosdesanpablo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@traperosdesanpablo7" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-scroll">
+        <!-- Logo -->
+        <!--<label class="logo">
+          <img src="img/AVC 2.png" alt="Logo AVC">
+        </label> -->
+        <label class="logo">
+        <img id="logo-img" src= "img/logoprincipal.png" alt="Logo AVC">
+        </label>
+            
+        <!-- Checkbox for toggling menu -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+      
+        <!-- Navigation Links -->
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="donar_mueble.html">Donar Muebles</a></li>
+          <li><a href="donar_ropa.html">Donar Ropa</a></li>
+          <li><a href="donar_artefacto.html">Donar Artefactos</a></li>
+          <li><a href="donar_elec.html">Donar Electrónicos</a></li>
+          <li><a href="login.html" class="active">Acceso</a></li>
+          
+        </ul>
+      </nav>
+</section>
+
+<section class="login-section">
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Iniciar Sesión</h2>
+      <form action="login.php" method="POST">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="usuario" placeholder="Usuario" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+      <!--
+      <p class="extra-text">
+        ¿No tienes cuenta? <a href="#">Regístrate</a>
+      </p>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- Modal de verificación -->
+<div id="verificacionModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Verificación</h2>
+    <p>Introduce el código que recibiste en tu correo:</p>
+    <form action="verificar.php" method="POST">
+      <input type="text" name="codigo" placeholder="Código de 6 dígitos" required>
+      <button type="submit" class="btn-login">Verificar</button>
+    </form>
+  </div>
+</div>
+
+<div id="errorModal" class="modal">
+  <div class="modal-content">
+    <span class="close-error">&times;</span>
+    <h2 style="color:red;">❌ Error</h2>
+    <p>Código incorrecto. Debes iniciar sesión nuevamente.</p>
+  </div>
+</div>
+
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <h2 style="color:green;">✅ Verificación Exitosa</h2>
+    <p>Bienvenido al sistema, serás redirigido en breve...</p>
+  </div>
+</div>
+
+
+
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("verificacionModal");
+    const closeBtn = document.querySelector(".close");
+
+    const errorModal = document.getElementById("errorModal");
+    const closeErrorBtn = document.querySelector(".close-error");
+    const successModal = document.getElementById("successModal")
+
+    // ⚡️ Crear objeto para leer parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+
+    // Mostrar modal de verificación si ?verificar=1
+    if (params.get("verificar") === "1") {
+      modal.classList.add("show");
+    }
+
+    // Mostrar modal de error si ?error=1
+    if (params.get("error") === "1") {
+      errorModal.classList.add("show");
+    }
+
+    // Cerrar modal de verificación
+    closeBtn.onclick = () => modal.classList.remove("show");
+    window.onclick = (e) => { 
+      if (e.target == modal) modal.classList.remove("show"); 
+    };
+
+    // Cerrar modal de error
+    closeErrorBtn.onclick = () => errorModal.classList.remove("show");
+    window.onclick = (e) => { 
+      if (e.target == errorModal) errorModal.classList.remove("show"); 
+    };
+
+
+    // Mostrar modal de éxito si ?success=1
+    if (params.get("success") === "1") {
+      successModal.classList.add("show");
+
+      // ⏳ Después de 2 segundos, redirigir automáticamente
+      setTimeout(() => {
+        window.location.href = "bienvenido.php";
+      }, 2000);
+    }
+
+    if (params.get("error") === "2") {
+      errorModal.querySelector("p").innerText = "❌ Contraseña incorrecta.";
+      errorModal.classList.add("show");
+    }
+    if (params.get("error") === "3") {
+      errorModal.querySelector("p").innerText = "❌ Usuario no encontrado.";
+      errorModal.classList.add("show");
+    }
+  });
+</script>
+
+
+</html>

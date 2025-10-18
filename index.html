@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Traperos de San Pablo - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link rel="stylesheet" href="Styles/estilos_inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+  <div id="topbar">
+        <!-- Correo a la izquierda -->
+        <div class="topbar-left">
+          <a href="mailto:avchabilidadessociales@gmail.com" class="email">
+            <i class="fa fa-envelope"></i> hola@traperosdesanpablo.org
+          </a>
+        </div>
+        <!-- Teléfono y redes sociales -->
+        <div class="topbar-right">
+          <!-- Teléfono -->
+          <div class="contact-info">
+            <i class="fa fa-phone"></i>
+            <a href="https://api.whatsapp.com/send/?phone=51943520010&amp;text=¡Hola! Me gustaría recibir más información sobre los programas de habilidades blandas!" target="_blank">(+51) 982 549 199</a>
+          </div>
+          <!-- Redes Sociales -->
+          <div class="social-icons">
+            <a href="https://www.facebook.com/traperosdesanpablo" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/traperosdesanpablo/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@traperosdesanpablo7" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-scroll">
+        <!-- Logo -->
+        <!--<label class="logo">
+          <img src="img/AVC 2.png" alt="Logo AVC">
+        </label> -->
+        <label class="logo">
+        <img id="logo-img" src= "img/logoprincipal.png" alt="Logo AVC">
+        </label>
+            
+        <!-- Checkbox for toggling menu -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+      
+        <!-- Navigation Links -->
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="donar_mueble.html">Donar Muebles</a></li>
+          <li><a href="donar_ropa.html">Donar Ropa</a></li>
+          <li><a href="donar_artefacto.html">Donar Artefactos</a></li>
+          <li><a href="donar_elec.html">Donar Electrónicos</a></li>
+          <li><a href="login.html">Acceso</a></li>
+          
+        </ul>
+      </nav>
+</section>
+
+<!-- CARRUSEL -->
+<section class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide fade">
+      <img src="img/1 (1) (1).jpg" alt="Imagen 1">
+    </div>
+    <div class="carousel-slide fade">
+      <img src="img/2.jpg" alt="Imagen 2">
+    </div>
+    <div class="carousel-slide fade">
+      <img src="img/3.jpg" alt="Imagen 3">
+    </div>
+
+    <!-- Botones -->
+    <a class="carousel-prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="carousel-next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Puntos -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </div>
+</section>
+<!-- FIN CARRUSEL -->
+
+<section class="intro-section" style="background-image: url('img/1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="intro-container">
+    <div class="intro-text">
+      <h2 class="slide-in-left">¡BIENVENIDOS!</h2>
+      <hr class="intro-line">
+      <p>
+      Bienvenidos a la página oficial de <strong>Traperos de San Pablo</strong>, una organización que trabaja incansablemente para transformar la vida de miles de familias a través de la solidaridad. 
+      Nuestro objetivo es recuperar, reciclar y dar un nuevo propósito a los bienes que recibimos, contribuyendo a la protección del medio ambiente y generando recursos para programas sociales que benefician a quienes más lo necesitan.
+      </p>
+      <p>
+      Gracias al apoyo de personas de buen corazón y a la dedicación de nuestros voluntarios, promovemos una cultura de donación responsable y compromiso social. 
+      Cada aporte suma y nos permite llevar esperanza, dignidad y nuevas oportunidades a comunidades vulnerables en todo el país.
+      </p>
+    </div>
+    <div class="intro-video">
+      <iframe width="500" height="280" src="https://www.youtube.com/embed/hIklQ1QzBC0?si=-AYAyX1ofZP8QIA9" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="modalidades">
+  <h2>AVC con los niños</h2>
+
+  <div class="mod-item">
+    <div class="mod-text">
+      <p>
+        Como parte de nuestro compromiso con la educación y el desarrollo social, la academia AVC ha decidido brindar clases virtuales gratuitas a niños de escasos recursos. Este proyecto voluntario cuenta con la participación de profesores extranjeros que, con vocación y dedicación, enseñan habilidades sociales, oratoria y liderazgo a los más pequeños. Creemos que todos los niños merecen una oportunidad para aprender y crecer.
+      </p>
+      <p>
+        Aunque las clases se desarrollan en formato virtual, los niños asisten presencialmente a las instalaciones de la academia AVC, donde se les proporciona un entorno seguro, supervisado y equipado con computadoras, audífonos e internet. Esto garantiza que todos puedan participar activamente sin limitaciones tecnológicas.
+      </p>
+    </div>
+    <div class="mod-img">
+      <iframe width="360" height="215" src="https://www.youtube.com/embed/Dc2H390AJQc" 
+        title="Clases Internacionales" frameborder="0" allowfullscreen 
+        style="border-radius: 8px; max-width: 100%;"></iframe>
+    </div>
+  </div>
+</section> -->
+
+<section class="modalidades">
+  <h2>Traperos de San Pablo</h2>
+
+  <div class="mod-item">
+    <div class="mod-text">
+      <p>
+         Tenemos como misión mejorar un poco la calidad de vida de personas a través de nuestras diferentes acciones sociales, esto es posible gracias a las donaciones de objetos usados y el reciclaje que logran beneficiar a los que menos tienen.
+         Somos un canal empático y solidario que lleva como bandera principal la de ayudar al prójimo.
+      </p>
+      <p>
+        Nuestro compromiso se refleja en cada donación recibida y en cada iniciativa que llevamos adelante, fomentando una cultura de apoyo mutuo, responsabilidad social y cuidado del planeta. 
+        Gracias al esfuerzo conjunto de voluntarios, colaboradores y personas solidarias, seguimos construyendo oportunidades para miles de familias en situación de vulnerabilidad.
+      </p>
+      </p>
+    </div>
+
+    <!-- Imagen principal + imagen encima tipo "miniatura inferior" -->
+    <div class="mod-img image-stack">
+      <img src="img/imagen2.JPG" alt="Clases con niños" class="main-image">
+      <img src="img/traperoLogo.JPG" alt="Detalle inferior" class="mini-image">
+    </div>
+  </div>
+</section>
+
+
+<section class="ofrecemos">
+  <div class="ofrecemos-inner">
+    <!--<h2></h2> -->
+    <div class="flex">
+      
+      <!-- Tarjeta 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/pañales.jpg" alt="Acción Voluntaria">
+          </div>
+          <div class="flip-card-back">
+            <h3>Pañales</h3>
+            <p>Cualquier Tipo de Pañales son Aceptados, Para Niños y Adultos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/juguete.jpg" alt="Transformación Social">
+          </div>
+          <div class="flip-card-back">
+            <h3>Juguetes</h3>
+            <p>Peluches, Carritos, Pelotas, Muñecas, Juegos de Mesa, Bicicletas, Otros.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/alimentos.jpg" alt="Transformación Social">
+          </div>
+          <div class="flip-card-back">
+            <h3>Alimentos</h3>
+            <p>Alimentos No Perecederos, Formulas para Niños.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="imagen-central">
+  <div class="imagen-contenedor">
+    <img src="img/aliadas.png" alt="Imagen central">
+  </div>
+</section>
+
+
+  </div>
+  
+  <footer style="background-color: #ED582D; padding: 1.5rem; text-align: center; font-size: 0.9rem; color: #000000; border-top: 1px solid #ddd;">
+    © Copyright 2025 Traperos de San Pablo | Nuestros mejores deseos para ustedes y sus familias
+  </footer>
+</body>
+<script>
+    window.onscroll = function() {
+      var navbar = document.querySelector('nav');
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("carousel-slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+
+    // Auto-play cada 5 segundos
+    setInterval(() => { plusSlides(1); }, 5000);
+
+  </script>
+</html>

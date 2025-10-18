@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Donar Muebles - Traperos de San Pablo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="Styles/estilos_inicio.css">
+  <!-- Estilos específicos de la página Donar Mueble -->
+  <link rel="stylesheet" href="Styles/estilo_donar_mueble.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div id="topbar">
+    <div class="topbar-left">
+      <a href="mailto:hola@traperosdesanpablo.org" class="email">
+        <i class="fa fa-envelope"></i> hola@traperosdesanpablo.org
+      </a>
+    </div>
+    <div class="topbar-right">
+      <div class="contact-info">
+        <i class="fa fa-phone"></i>
+        <a href="https://api.whatsapp.com/send/?phone=51943520010" target="_blank">(+51) 982 549 199</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/traperosdesanpablo" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/traperosdesanpablo/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@traperosdesanpablo7" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-scroll">
+    <label class="logo">
+      <img id="logo-img" src="img/logoprincipal.png" alt="Logo">
+    </label>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="donar_mueble.html" class="active">Donar Muebles</a></li>
+      <li><a href="donar_ropa.html">Donar Ropa</a></li>
+      <li><a href="donar_artefacto.html">Donar Artefactos</a></li>
+      <li><a href="donar_elec.html">Donar Electrónicos</a></li>
+      <li><a href="login.html">Acceso</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-donar">
+    DONAR MUEBLES
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="donar-section">
+    <div class="donar-text">
+      <h2>DONACIÓN DE MUEBLES</h2>
+      <p>
+        Cuando compres nuevos muebles, no deseches los viejos a la basura. Puede que ya no los quieras, pero quizás alguien estaría feliz con tener tu viejo sofá o silla reclinable. Afortunadamente, donar tus muebles usados no es difícil, hay muchas maneras de hacerlo, dándoles una segunda vida.
+      </p>
+      <p><em>Para la donación de muebles en desuso es importante tener en cuenta algunos detalles:</em></p>
+      <p>1. No puedes entregar muebles en malas condiciones o destruidos, por ello es necesario inculcar el hábito de cuidar sus pertenencias para que en un futuro estos puedan ser conservados y obsequiados a otras personas o familias.</p>
+      <p>2. Además, cuando vayamos a recoger el donativo es pertinente que lo recolectado se separe, por un lado los que pueden ser usados inmediatamente, y en otra, los que requieren algún tipo de reparación.</p>
+      <p>
+        Recuerda que no sólo es el acto de donar, también estarás aportando a un mejor cuidado del medio ambiente. Únete, y empieza reciclando todos los objetos que tienes en desuso y dales una segunda vida.
+      </p>
+      <p>
+        <strong>Traperos de San Pablo</strong> acepta muebles de todo tipo: cómodas, juegos de sala, muebles de entretenimiento, armarios, sillones, mesas, cajoneras, entre otros. Es importante destacar que los artículos no deben estar apolillados y aptos para un segundo uso.
+      </p>
+    </div>
+
+    <div class="donar-form">
+      <h3>AYÚDANOS CON TU DONACIÓN <br> ¡Recogemos a Domicilio!</h3>
+        <form action="procesar_donacion.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre y Apellidos" required>
+            <input type="email" name="correo" placeholder="Correo Electrónico"
+                pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required
+                title="Solo se permiten correos @gmail.com">
+            <input id="phone" type="tel" name="telefono"
+                pattern="[0-9]{9}" required
+                title="El número debe tener exactamente 9 dígitos">
+
+            <!-- Nuevo selector de tipo de mueble -->
+            <select name="donacion" required>
+            <option value="" disabled selected>Selecciona el tipo de mueble</option>
+            <option value="Silla">Silla</option>
+            <option value="Mesa">Mesa</option>
+            <option value="Alfombra">Alfombra</option>
+            <option value="Ropero">Ropero</option>
+            <option value="Sofá">Sofá</option>
+            <option value="Cama">Cama</option>
+            <option value="Colchón">Colchón</option>
+            </select>
+
+            <textarea name="descripcion" placeholder="¿Qué te gustaría donar?" required></textarea>
+            <button type="submit">Enviar Información »</button>
+        </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #ED582D; padding: 1.5rem; text-align: center; font-size: 0.9rem; color: #000000; border-top: 1px solid #ddd;">
+    © Copyright 2025 Traperos de San Pablo | Nuestros mejores deseos para ustedes y sus familias
+  </footer>
+
+    <div id="modalMensaje" class="modal">
+    <div class="modal-content">
+        <span id="cerrarModal" class="cerrar">&times;</span>
+        <h2 id="tituloModal">Mensaje</h2>
+        <p id="textoModal"></p>
+        <button id="btnCerrar">OK</button>
+    </div>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+</body>
+<script>
+
+      window.onscroll = function() {
+      var navbar = document.querySelector('nav');
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+
+
+      const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "pe",   // Perú por defecto
+    preferredCountries: ["pe", "us", "eg", "es", "mx"],
+    separateDialCode: true  // muestra el código separado (+51)
+  });
+
+
+
+// ✅ Función para leer parámetros de la URL
+  function getQueryParam(param) {
+    let params = new URLSearchParams(window.location.search);
+    return params.get(param);
+  }
+
+  // Función para mostrar modal
+  function mostrarModal(titulo, mensaje) {
+    document.getElementById("tituloModal").innerText = titulo;
+    document.getElementById("textoModal").innerText = mensaje;
+    document.getElementById("modalMensaje").style.display = "flex";
+  }
+
+  // Cerrar modal
+  document.getElementById("cerrarModal").onclick = function() {
+    document.getElementById("modalMensaje").style.display = "none";
+  };
+  document.getElementById("btnCerrar").onclick = function() {
+    document.getElementById("modalMensaje").style.display = "none";
+  };
+
+  // Mostrar mensaje de éxito
+  if (getQueryParam("success") === "1") {
+    mostrarModal("✅ ¡Gracias por su donación!",
+      "En estos momentos estará recibiendo en su correo el comprobante de su donación. ¡Muchas gracias!");
+    window.history.replaceState({}, document.title, "donar_mueble.html");
+  }
+
+  // Mostrar mensaje de error
+  if (getQueryParam("error") === "1") {
+    mostrarModal("❌ Error",
+      "Ocurrió un error al procesar su donación. Por favor intente nuevamente.");
+    window.history.replaceState({}, document.title, "donar_mueble.html");
+  }
+</script>
+</html>
